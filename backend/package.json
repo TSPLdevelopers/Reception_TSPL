@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "create:admin": "node src/scripts/createAdmin.js",
+    "migrate:users": "node src/scripts/migrateUsersToInternationalPhones.js",
+    "test": "node --test app.test.js src/controllers/adminDataController.test.js src/services/registrationService.test.js src/utils/authCookie.test.js src/utils/otpSecurity.test.js src/utils/password.test.js src/utils/phone.test.js src/utils/visitVerificationCookie.test.js src/controllers/categoryGuard.test.js src/services/categoryAccessService.test.js",
+    "check:syntax": "node src/scripts/checkSyntax.js",
+    "validate": "npm run check:syntax && npm test"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.5.2",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "libphonenumber-js": "^1.13.8",
+    "mongoose": "^8.18.0",
+    "morgan": "^1.10.1",
+    "nodemailer": "^9.0.3",
+    "twilio": "^6.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
