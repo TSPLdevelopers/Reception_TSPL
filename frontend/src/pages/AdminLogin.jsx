@@ -173,7 +173,13 @@ function AdminLogin() {
                     </div>
                 </section>
 
-                <section className="w-[430px] rounded-[28px] border border-[#e7eaf0] bg-white p-[30px] shadow-[0_22px_55px_rgba(115,0,66,.16)] max-[980px]:mx-auto max-[980px]:w-full max-[980px]:max-w-[430px] max-[520px]:p-6">
+                <section
+    className={`w-[430px] rounded-[28px] border border-[#e7eaf0] bg-white p-[30px] shadow-[0_22px_55px_rgba(115,0,66,.16)] max-[980px]:mx-auto max-[980px]:w-full max-[980px]:max-w-[430px] max-[520px]:p-6 ${
+        mode === "reset"
+            ? "max-h-[520px] overflow-y-auto"
+            : ""
+    }`}
+>
                     <div className="mb-6 flex h-[62px] w-[62px] items-center justify-center rounded-[18px] bg-[#f9edf5] text-[28px] text-brand">
                         <FaShieldAlt />
                     </div>
