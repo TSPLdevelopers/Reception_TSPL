@@ -138,7 +138,7 @@ function AdminLogin() {
         ? "Authorized access only for administrators."
         : mode === "forgot"
             ? "Enter the registered admin email to receive a secure reset code."
-            : "Enter the email code and choose a new secure password.";
+             : "Enter the email code and choose a new secure password.";
 
     return (
         <div className="flex h-screen min-h-screen flex-col overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(115,0,66,.22),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(115,0,66,.18),transparent_32%),linear-gradient(135deg,#ffffff_0%,#f6e8f1_48%,#ffffff_100%)] max-[980px]:h-auto max-[980px]:overflow-visible">
