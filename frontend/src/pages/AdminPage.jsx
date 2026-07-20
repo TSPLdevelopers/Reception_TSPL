@@ -19,13 +19,14 @@ function AdminPage() {
     const dashboard = useAdminDashboard();
 
     const logout = async () => {
-        try {
-            await api.post("/admin/logout");
-        } catch {
-            
-        }
-        navigate("/admin-login", { replace: true });
-    };
+    try {
+        await api.post("/admin/logout");
+    } catch (error) {
+        console.warn("Logout request failed:", error);
+    }
+
+    navigate("/admin-login", { replace: true });
+};
 
     const exportUsers = () => {
         if (!dashboard.users.length) {
