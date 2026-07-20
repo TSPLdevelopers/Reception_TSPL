@@ -56,7 +56,7 @@ function AdminPage() {
             <main id="dashboard-top" className="scroll-mt-[150px] px-[38px] py-[34px] max-md:px-5 max-sm:px-4">
                 <div className="mb-7">
                     <h1 className="text-[34px] font-extrabold text-[#111827] max-sm:text-[28px]">Admin Dashboard</h1>
-                    <p className="mt-1 text-[15px] text-[#6b7280]">Monitor walk-in records, category insights, and visit activity.</p>
+                    <p className="mt-1 text-[15px] text-[#6b7280]">Monitor walk-in records, category insights, and walk-in activity.</p>
                 </div>
 
                 {dashboard.error && (

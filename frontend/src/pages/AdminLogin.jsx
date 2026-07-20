@@ -157,9 +157,9 @@ function AdminLogin() {
 
             <main className="mx-auto grid h-[calc(100vh-144px)] w-full max-w-[1180px] flex-1 grid-cols-[1fr_430px] items-center gap-[60px] overflow-hidden px-[34px] py-[18px] max-[980px]:h-auto max-[980px]:grid-cols-1 max-[980px]:gap-[30px] max-[980px]:overflow-y-auto max-[620px]:px-[18px] max-[620px]:py-6">
                 <section className="max-w-[620px] max-[980px]:mx-auto max-[980px]:text-center">
-                    <span className="inline-block rounded-full bg-[#fde8f3] px-4 py-2 text-[12px] font-black tracking-[.7px] text-brand">SECURE ADMIN ACCESS</span>
+                    <span className="inline-block rounded-full bg-[#fde8f3] px-4 py-2 text-[12px] font-black tracking-[.7px] text-brand">TechTorch Front Office</span>
                     <h1 className="mt-5 text-[40px] font-black leading-[1.15] text-brand-dark max-[620px]:text-[34px]">
-                        TechTorch Front Office Admin Access Portal
+                         Admin Access Portal
                     </h1>
                     <p className="mt-5 max-w-[560px] text-[15px] leading-[1.7] text-[#6b7280] max-[980px]:mx-auto">
                         Manage walk-ins, monitor daily entries, export reports, and access secure walk-in history from one dashboard.
