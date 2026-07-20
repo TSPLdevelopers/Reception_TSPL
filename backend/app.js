@@ -35,12 +35,12 @@ if (process.env.NODE_ENV !== "production") {
     app.use(morgan("dev"));
 }
 
-app.use("/api/admin/login", createLimiter(5, "Too many login attempts. Please try again after 15 minutes."));
-app.use("/api/admin/forgot-password", createLimiter(5, "Too many reset requests. Please try again after 15 minutes."));
-app.use("/api/admin/reset-password", createLimiter(10, "Too many reset attempts. Please try again after 15 minutes."));
-app.use("/api/auth/check-user", createLimiter(30, "Too many lookup attempts. Please try again after 15 minutes."));
-app.use("/api/otp/send", createLimiter(5, "Too many OTP requests. Please try again after 15 minutes."));
-app.use("/api/otp/verify", createLimiter(10, "Too many OTP attempts. Please try again after 15 minutes."));
+app.use("/api/admin/login", createLimiter(5, "Too many login attempts. Please try again after 1 minutes."));
+app.use("/api/admin/forgot-password", createLimiter(5, "Too many reset requests. Please try again after 1 minutes."));
+app.use("/api/admin/reset-password", createLimiter(10, "Too many reset attempts. Please try again after 1 minutes."));
+app.use("/api/auth/check-user", createLimiter(30, "Too many lookup attempts. Please try again after 1 minutes."));
+app.use("/api/otp/send", createLimiter(5, "Too many OTP requests. Please try again after 1 minutes."));
+app.use("/api/otp/verify", createLimiter(10, "Too many OTP attempts. Please try again after 1 minutes."));
 app.use("/api/visit/create", createLimiter(20, "Too many visit requests. Please try again later."));
 
 app.use("/api/otp", require("./src/routes/otpRoutes"));
