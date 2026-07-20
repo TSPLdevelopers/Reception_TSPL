@@ -55,15 +55,15 @@ function SearchBar({ onSearch, onReset }) {
                     <select className={fieldClass} name="viewType" value={filters.viewType} onChange={change}>
                         <option value="all">All Users</option>
                         <option value="recent">Recent Entries</option>
-                        <option value="frequent">Frequent Visitors</option>
+                        <option value="frequent">Frequent Walk-Ins</option>
                     </select>
                 </FilterField>
                 <FilterField label="Sort By" icon={FaSortAmountDown}>
                     <select className={fieldClass} name="sortBy" value={filters.sortBy} onChange={change}>
                         <option value="newest">Newest First</option>
                         <option value="oldest">Oldest First</option>
-                        <option value="mostVisits">Most Visits</option>
-                        <option value="leastVisits">Least Visits</option>
+                        <option value="mostVisits">Most Walk-Ins</option>
+                        <option value="leastVisits">Least Walk-Ins</option>
                         <option value="name">Name A-Z</option>
                     </select>
                 </FilterField>

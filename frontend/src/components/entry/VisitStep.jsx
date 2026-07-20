@@ -7,12 +7,12 @@ function VisitStep({ visitData, setVisitData, createVisit, isSubmitting }) {
     return (
         <EntryCard
             icon={FaClipboardList}
-            title="Visit Details"
-            subtitle="Please provide visit purpose and the person you want to meet."
+            title="Walk-In Details"
+            subtitle="Please provide Walk-In purpose and the person you want to meet."
         >
             <div className="space-y-5">
                 <FormField
-                    label="Reason for Visit"
+                    label="Reason for Walk-In"
                     icon={FaPenAlt}
                     value={visitData.reason}
                     onChange={(reason) =>
@@ -38,7 +38,7 @@ function VisitStep({ visitData, setVisitData, createVisit, isSubmitting }) {
                 </div>
 
                 <ActionButton onClick={createVisit} disabled={isSubmitting}>
-                    {isSubmitting ? "Submitting..." : "Submit Visit →"}
+                    {isSubmitting ? "Submitting..." : "Submit Walk-In →"}
                 </ActionButton>
             </div>
         </EntryCard>
