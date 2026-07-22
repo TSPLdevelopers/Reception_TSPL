@@ -35,8 +35,8 @@ function SearchBar({ onSearch, onReset }) {
     return (
         <section className={`${surfaceClass} p-7 max-sm:p-5`}>
             <span className="inline-flex items-center gap-2 rounded-full bg-brand-soft px-3 py-1.5 text-[11px] font-bold uppercase tracking-[.1em] text-brand"><FaFilter /> Advanced Filters</span>
-            <h2 className="mt-4 text-[26px] font-bold text-[#111827]">Smart User Search</h2>
-            <p className="mt-1.5 text-sm leading-6 text-[#6b7280]">Search visitors using name, phone, email, category, visit date, time range, or visit frequency.</p>
+            <h2 className="mt-4 text-[26px] font-bold text-[#111827]">Smart Search</h2>
+            <p className="mt-1.5 text-sm leading-6 text-[#6b7280]">Search walk-ins using name, phone, email, category, walk-in date, time range, or walk-in frequency.</p>
 
             <div className="mt-6 grid grid-cols-4 gap-[18px] max-xl:grid-cols-2 max-md:grid-cols-1">
                 <FilterField label="Search User" icon={FaUser}>
@@ -55,15 +55,15 @@ function SearchBar({ onSearch, onReset }) {
                     <select className={fieldClass} name="viewType" value={filters.viewType} onChange={change}>
                         <option value="all">All Users</option>
                         <option value="recent">Recent Entries</option>
-                        <option value="frequent">Frequent Visitors</option>
+                        <option value="frequent">Frequent Walk-Ins</option>
                     </select>
                 </FilterField>
                 <FilterField label="Sort By" icon={FaSortAmountDown}>
                     <select className={fieldClass} name="sortBy" value={filters.sortBy} onChange={change}>
                         <option value="newest">Newest First</option>
                         <option value="oldest">Oldest First</option>
-                        <option value="mostVisits">Most Visits</option>
-                        <option value="leastVisits">Least Visits</option>
+                        <option value="mostVisits">Most Walk-Ins</option>
+                        <option value="leastVisits">Least Walk-Ins</option>
                         <option value="name">Name A-Z</option>
                     </select>
                 </FilterField>

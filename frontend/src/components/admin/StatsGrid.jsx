@@ -1,7 +1,7 @@
 import { FaHandshake, FaIdBadge, FaTruck, FaUserCheck, FaUsers } from "react-icons/fa";
 
 const definitions = [
-    ["Total Walk Ins", "totalUsers", FaUsers],
+    ["Total Walk-Ins", "totalUsers", FaUsers],
     ["Clients", "totalClients", FaHandshake],
     ["Vendors", "totalVendors", FaTruck],
     ["Officials", "totalOfficials", FaIdBadge],

@@ -107,11 +107,11 @@ function UserHistoryPage() {
             <main className="px-[38px] py-[34px] max-md:px-5 max-sm:px-4">
                 <div className="flex items-start justify-between gap-6 max-md:flex-col">
                     <div>
-                        <span className="text-[11px] font-bold uppercase tracking-[.13em] text-brand">Visitor History</span>
+                        <span className="text-[11px] font-bold uppercase tracking-[.13em] text-brand">Walk-in History</span>
                         <h1 className="mt-3 text-[34px] font-extrabold text-[#111827]">{fullName}</h1>
-                        <p className="mt-1 text-sm text-[#6b7280]">Complete visit timeline and visitor profile details.</p>
+                        <p className="mt-1 text-sm text-[#6b7280]">Complete walk-in timeline and profile details.</p>
                     </div>
-                    <button type="button" onClick={exportUser} className={buttonClass.primary}><FaDownload /> Export CSV</button>
+                    <button type="button" onClick={exportUser} className={buttonClass.primary}><FaDownload /> Export Records</button>
                 </div>
 
                 <div className="mt-8 grid grid-cols-[340px_1fr] gap-7 max-lg:grid-cols-1">
@@ -135,14 +135,14 @@ function UserHistoryPage() {
                         </div>
 
                         <div className="mt-6 flex items-center justify-between rounded-[18px] bg-brand p-5 text-white">
-                            <span className="font-bold">Total Visits</span>
+                            <span className="font-bold">Total Walk-Ins</span>
                             <strong className="text-[30px] font-extrabold">{user.visitCount || 0}</strong>
                         </div>
                     </aside>
 
                     <section className={`${surfaceClass} p-7 max-sm:p-5`}>
-                        <h2 className="text-2xl font-bold text-[#111827]">Visit Timeline</h2>
-                        <p className="mt-1 text-sm text-[#6b7280]">{user.visits?.length || 0} visits recorded</p>
+                        <h2 className="text-2xl font-bold text-[#111827]">Walk-In Timeline</h2>
+                        <p className="mt-1 text-sm text-[#6b7280]">{user.visits?.length || 0} walk-ins recorded</p>
 
                         {!user.visits?.length ? (
                             <div className="py-16 text-center">
