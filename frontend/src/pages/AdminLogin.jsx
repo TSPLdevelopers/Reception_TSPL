@@ -88,9 +88,6 @@ function AdminLogin() {
             setIsSubmitting(true);
             const response = await api.post("/admin/forgot-password", { email });
             toast.success(response.data.message);
-            if (import.meta.env.DEV && response.data.otp) {
-                toast.success(`Development OTP: ${response.data.otp}`);
-            }
             setMode("reset");
         } catch (error) {
             toast.error(error.response?.data?.message || "Unable to send reset code");

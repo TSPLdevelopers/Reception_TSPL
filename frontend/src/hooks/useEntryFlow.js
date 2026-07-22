@@ -230,9 +230,6 @@ function useEntryFlow(category, navigate) {
         setOtp("");
         setStep("otp");
         toast.success(response.data.message || "OTP sent successfully");
-        if (import.meta.env.DEV && response.data.otp) {
-            toast.success(`Development OTP: ${response.data.otp}`);
-        }
     };
 
     const checkUser = async () => {
