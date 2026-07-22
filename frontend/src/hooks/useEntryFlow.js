@@ -309,13 +309,21 @@ function useEntryFlow(category, navigate) {
         }
         try {
             setIsSubmitting(true);
-            await api.post("/visit/create", {
-                phone,
-                reason: visitData.reason.trim(),
-                whomToMeet: visitData.whomToMeet.trim()
-            });
-            toast.success("Visit registered successfully");
-            setStep("success");
+           const response = await api.post("/visit/create", {
+    phone,
+    reason: visitData.reason.trim(),
+    whomToMeet: visitData.whomToMeet.trim()
+});
+
+toast.success(response.data.message || "Visit registered successfully");
+
+if (response.data.emailSent) {
+    toast.success("Confirmation email has been sent.");
+} else {
+    toast("Visit registered. No confirmation email was sent.");
+}
+
+setStep("success");
         } catch (error) {
             const status = error.response?.status;
             toast.error(error.response?.data?.message || "Unable to create visit");
