@@ -47,7 +47,7 @@ function RegisterStep({
                     icon={FaEnvelope}
                     value={formData.email}
                     onChange={(email) =>
-                        setFormData({ ...formData, email })
+                        setFormData({ ...formData, email: email.trim().toLowerCase() })
                     }
                     placeholder="email@company.com"
                     type="email"
