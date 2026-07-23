@@ -5,12 +5,12 @@ function EntrySidebar({ currentStep, flowType }) {
         { id: 1, title: "Phone", icon: FaMobileAlt },
         { id: 2, title: flowType === "existing" ? "Profile Found" : "Registration", icon: FaUserEdit },
         { id: 3, title: "Verification", icon: FaShieldAlt },
-        { id: 4, title: "Visit Details", icon: FaClipboardList },
+        { id: 4, title: "Walk-In Details", icon: FaClipboardList },
         { id: 5, title: "Completed", icon: FaCheckCircle }
     ];
 
     return (
-        <aside className="flex min-h-[calc(100vh-72px)] flex-col border-r border-[#dde5f4] bg-footer-soft px-6 pb-8 pt-[42px] max-[1180px]:min-h-0 max-[1180px]:border-b max-[1180px]:border-r-0 max-[1180px]:px-[18px] max-[1180px]:py-6">
+        <aside className="flex min-h-[calc(100vh-72px)] flex-col border-r border-[#dde5f4] bg-[#fde8f3] px-6 pb-8 pt-[42px] max-[1180px]:min-h-0 max-[1180px]:border-b max-[1180px]:border-r-0 max-[1180px]:px-[18px] max-[1180px]:py-6">
             <div>
                 <h2 className="mb-1 text-[30px] font-extrabold text-brand-dark max-[680px]:text-2xl">Registration</h2>
                 <p className="text-sm text-[#6b7a90]">Complete your secure check-in.</p>

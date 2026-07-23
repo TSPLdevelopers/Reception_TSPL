@@ -26,7 +26,7 @@ function CategoryTypeSelect({ category, formData, setFormData }) {
                 value={formData.typeOption}
                 options={options}
                 onChange={handleTypeChange}
-                placeholder="Select visitor type"
+                placeholder="Select walk-in type"
                 icon={FaBuilding}
             />
 

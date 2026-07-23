@@ -43,6 +43,7 @@ function InternationalPhoneInput({
                     value={selectedCountry.value}
                     options={PHONE_COUNTRIES}
                     onChange={handleCountryChange}
+                   
                     placeholder="Country"
                     renderValue={(country) => (
                         <span className="flex items-center gap-2">
@@ -74,6 +75,7 @@ function InternationalPhoneInput({
                         autoComplete="tel-national"
                         placeholder="Enter phone number"
                         value={nationalDigits}
+                        maxLength={13}
                         onChange={handleNumberChange}
                         className="h-full min-w-0 flex-1 border-none bg-transparent text-[15px] text-[#111827] outline-none placeholder:text-[#8a8f98]"
                     />
