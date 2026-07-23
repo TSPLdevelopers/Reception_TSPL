@@ -45,7 +45,7 @@ function AddressFields({ address, onChange }) {
                         Address Details
                     </h3>
                     <p className="text-xs font-semibold text-[#6b7280]">
-                        Please enter the visitor&apos;s complete address.
+                        Please enter the walk-in&apos;s complete address.
                     </p>
                 </div>
             </div>

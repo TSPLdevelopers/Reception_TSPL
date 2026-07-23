@@ -5,7 +5,7 @@ function EntrySidebar({ currentStep, flowType }) {
         { id: 1, title: "Phone", icon: FaMobileAlt },
         { id: 2, title: flowType === "existing" ? "Profile Found" : "Registration", icon: FaUserEdit },
         { id: 3, title: "Verification", icon: FaShieldAlt },
-        { id: 4, title: "Visit Details", icon: FaClipboardList },
+        { id: 4, title: "Walk-In Details", icon: FaClipboardList },
         { id: 5, title: "Completed", icon: FaCheckCircle }
     ];
 

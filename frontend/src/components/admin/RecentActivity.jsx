@@ -5,7 +5,7 @@ function RecentActivity({ activities }) {
     return (
         <section className={`${surfaceClass} mt-6 p-7`}>
             <h2 className="text-xl font-bold text-[#111827]">Recent Activity</h2>
-            <p className="mt-1 text-sm text-[#6b7280]">Latest visitor check-ins</p>
+            <p className="mt-1 text-sm text-[#6b7280]">Latest walk-in check-ins</p>
 
             {activities.length ? (
                 <div className="mt-6 grid grid-cols-3 gap-x-10 gap-y-6 max-lg:grid-cols-2 max-sm:grid-cols-1">

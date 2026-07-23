@@ -13,7 +13,7 @@ function UserTable({ users, getLastVisit, onExport, onHistory }) {
         <section id="visitor-records" className={`${surfaceClass} mt-6 scroll-mt-[150px] overflow-hidden`}>
             <div className="flex items-center justify-between gap-4 border-b border-[#eef0f4] p-7 max-md:flex-col max-md:items-start">
                 <div>
-                    <h2 className="text-2xl font-bold text-[#111827]">Visitor Records</h2>
+                    <h2 className="text-2xl font-bold text-[#111827]">Walk-In Records</h2>
                     <p className="mt-1 text-sm text-[#6b7280]">{users.length} records found</p>
                 </div>
                 <button type="button" onClick={onExport} className={buttonClass.primary}><FaDownload /> Export Visible Records</button>
@@ -23,7 +23,7 @@ function UserTable({ users, getLastVisit, onExport, onHistory }) {
                 <table className="w-full min-w-[980px] border-collapse text-left text-sm">
                     <thead className="bg-gradient-to-r from-brand via-[#a40061] to-brand-dark text-white">
                         <tr>
-                            {["Name", "Phone", "Email", "Category", "Visits", "Last Visit", "History"].map((heading) => (
+                            {["Name", "Phone", "Email", "Category", "Walk-Ins", "Last Walk-In", "History"].map((heading) => (
                                 <th key={heading} className="px-5 py-4 text-xs font-bold uppercase tracking-[.07em]">{heading}</th>
                             ))}
                         </tr>

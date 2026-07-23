@@ -35,7 +35,7 @@ function AnalyticsCharts({ categoryData, visitData, dailyVisitData }) {
             </article>
 
             <article className={`${surfaceClass} p-6`}>
-                <h2 className="text-xl font-bold text-[#111827]">Top Visit Frequency</h2>
+                <h2 className="text-xl font-bold text-[#111827]">Top Walk-In Frequency</h2>
                 {visitData.length ? (
                     <ResponsiveContainer width="100%" height={260}>
                         <BarChart data={visitData}>
@@ -49,7 +49,7 @@ function AnalyticsCharts({ categoryData, visitData, dailyVisitData }) {
             </article>
 
             <article className={`${surfaceClass} p-6`}>
-                <h2 className="text-xl font-bold text-[#111827]">Daily Visit Trend</h2>
+                <h2 className="text-xl font-bold text-[#111827]">Daily Walk-In Trend</h2>
                 {dailyVisitData.length ? (
                     <ResponsiveContainer width="100%" height={260}>
                         <BarChart data={dailyVisitData}>

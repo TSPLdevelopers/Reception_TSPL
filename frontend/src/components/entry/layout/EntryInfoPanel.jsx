@@ -33,24 +33,24 @@ function EntryInfoPanel({ category, step, phone, formData, visitData, flowType }
         phone: "Waiting for mobile number",
         register: "Registration in progress",
         otp: "OTP verification pending",
-        visit: "Visit details required",
+        visit: "Walk-In details required",
         success: "Check-in completed"
     };
     const visitorName = formData.firstName
         ? `${formData.firstName} ${formData.lastName}`.trim()
-        : flowType === "existing" ? "Existing Visitor" : "Not entered";
+        : flowType === "existing" ? "Existing Walk-In" : "Not entered";
 
     return (
         <aside className="flex flex-col gap-[18px] max-[900px]:grid max-[900px]:grid-cols-2 max-[680px]:grid-cols-1">
             <InfoCard icon={FaLock} title="Secure Check-in" variant="primary">
-                Your credentials and visit records are protected using secure backend validation.
+                Your credentials and walk-in records are protected using secure backend validation.
             </InfoCard>
 
             <div className="rounded-[22px] border border-[#e7eaf0] bg-white p-6 shadow-[0_14px_35px_rgba(15,23,42,.06)]">
-                <h3 className="mb-[18px] text-lg font-bold text-[#111827]">Visitor Summary</h3>
+                <h3 className="mb-[18px] text-lg font-bold text-[#111827]">Walk-In Summary</h3>
                 <SummaryRow icon={FaBuilding} label="Category" value={category.toUpperCase()} />
                 <SummaryRow icon={FaPhoneAlt} label="Phone" value={phone || "Not entered"} />
-                <SummaryRow icon={FaUser} label="Visitor" value={visitorName} />
+                <SummaryRow icon={FaUser} label="Walk-In" value={visitorName} />
                 <SummaryRow icon={FaClipboardList} label="Reason" value={visitData.reason || "Pending"} />
                 <SummaryRow icon={FaUser} label="Whom To Meet" value={visitData.whomToMeet || "Pending"} />
             </div>

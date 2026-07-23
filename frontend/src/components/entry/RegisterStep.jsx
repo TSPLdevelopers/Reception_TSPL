@@ -63,7 +63,7 @@ function RegisterStep({
         <EntryCard
             icon={FaUser}
             title="New Registration"
-            subtitle="Please provide your details to continue with visitor verification."
+            subtitle="Please provide your details to continue with walk-in verification."
         >
             <div className="grid grid-cols-2 gap-[18px] max-[680px]:grid-cols-1">
                 <FormField
@@ -93,7 +93,9 @@ function RegisterStep({
                     label="Email"
                     icon={FaEnvelope}
                     value={formData.email}
-                    onChange={(email) => updateField("email", email)}
+                    onChange={(email) =>
+                        setFormData({ ...formData, email: email.trim().toLowerCase() })
+                    }
                     placeholder="email@company.com"
                     type="email"
                     autoComplete="email"

@@ -26,10 +26,10 @@ function SuccessCard({ category, phone, visitData, countdown, onHome }) {
             <div className="mx-auto mb-[22px] flex h-[70px] w-[70px] items-center justify-center rounded-full bg-[#dcfce7] text-4xl font-extrabold text-[#16a34a]">✓</div>
             <h1 className="mb-2 text-[30px] font-extrabold text-brand">You are verified</h1>
             <h2 className="text-xl font-bold text-[#111827]">Welcome to TechTorch Solutions</h2>
-            <p className="mt-4 text-[15px] leading-6 text-[#555]">Your visit has been registered successfully. Please proceed to the reception desk.</p>
+            <p className="mt-4 text-[15px] leading-6 text-[#555]">Your walk-in has been registered successfully. Please proceed to the reception desk.</p>
 
             <div className="mx-auto my-7 max-w-[420px] overflow-hidden rounded-[20px] border border-[#e8dbe4] bg-white text-left shadow-[0_14px_35px_rgba(115,0,66,.10)]">
-                <div className="bg-brand px-[22px] py-4 text-center font-bold tracking-[1px] text-white">VISITOR PASS</div>
+                <div className="bg-brand px-[22px] py-4 text-center font-bold tracking-[1px] text-white">WALK-IN PASS</div>
                 {details.map(([label, value]) => (
                     <div key={label} className="flex justify-between gap-[18px] border-b border-[#f1e8ee] px-[22px] py-3.5 text-sm">
                         <span className="font-semibold text-[#6b7280]">{label}</span>

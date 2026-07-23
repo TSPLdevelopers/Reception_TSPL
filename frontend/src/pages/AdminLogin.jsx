@@ -88,9 +88,6 @@ function AdminLogin() {
             setIsSubmitting(true);
             const response = await api.post("/admin/forgot-password", { email });
             toast.success(response.data.message);
-            if (import.meta.env.DEV && response.data.otp) {
-                toast.success(`Development OTP: ${response.data.otp}`);
-            }
             setMode("reset");
         } catch (error) {
             toast.error(error.response?.data?.message || "Unable to send reset code");
@@ -138,7 +135,7 @@ function AdminLogin() {
         ? "Authorized access only for administrators."
         : mode === "forgot"
             ? "Enter the registered admin email to receive a secure reset code."
-            : "Enter the email code and choose a new secure password.";
+             : "Enter the email code and choose a new secure password.";
 
     return (
         <div className="flex h-screen min-h-screen flex-col overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(115,0,66,.22),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(115,0,66,.18),transparent_32%),linear-gradient(135deg,#ffffff_0%,#f6e8f1_48%,#ffffff_100%)] max-[980px]:h-auto max-[980px]:overflow-visible">
@@ -157,9 +154,9 @@ function AdminLogin() {
 
             <main className="mx-auto grid h-[calc(100vh-144px)] w-full max-w-[1180px] flex-1 grid-cols-[1fr_430px] items-center gap-[60px] overflow-hidden px-[34px] py-[18px] max-[980px]:h-auto max-[980px]:grid-cols-1 max-[980px]:gap-[30px] max-[980px]:overflow-y-auto max-[620px]:px-[18px] max-[620px]:py-6">
                 <section className="max-w-[620px] max-[980px]:mx-auto max-[980px]:text-center">
-                    <span className="inline-block rounded-full bg-[#fde8f3] px-4 py-2 text-[12px] font-black tracking-[.7px] text-brand">SECURE ADMIN ACCESS</span>
+                    <span className="inline-block rounded-full bg-[#fde8f3] px-4 py-2 text-[12px] font-black tracking-[.7px] text-brand">TechTorch Front Office</span>
                     <h1 className="mt-5 text-[40px] font-black leading-[1.15] text-brand-dark max-[620px]:text-[34px]">
-                        TechTorch Front Office Admin Access Portal
+                         Admin Access Portal
                     </h1>
                     <p className="mt-5 max-w-[560px] text-[15px] leading-[1.7] text-[#6b7280] max-[980px]:mx-auto">
                         Manage walk-ins, monitor daily entries, export reports, and access secure walk-in history from one dashboard.
@@ -173,7 +170,13 @@ function AdminLogin() {
                     </div>
                 </section>
 
-                <section className="w-[430px] rounded-[28px] border border-[#e7eaf0] bg-white p-[30px] shadow-[0_22px_55px_rgba(115,0,66,.16)] max-[980px]:mx-auto max-[980px]:w-full max-[980px]:max-w-[430px] max-[520px]:p-6">
+                <section
+    className={`w-[430px] rounded-[28px] border border-[#e7eaf0] bg-white p-[30px] shadow-[0_22px_55px_rgba(115,0,66,.16)] max-[980px]:mx-auto max-[980px]:w-full max-[980px]:max-w-[430px] max-[520px]:p-6 ${
+        mode === "reset"
+            ? "max-h-[520px] overflow-y-auto"
+            : ""
+    }`}
+>
                     <div className="mb-6 flex h-[62px] w-[62px] items-center justify-center rounded-[18px] bg-[#f9edf5] text-[28px] text-brand">
                         <FaShieldAlt />
                     </div>
