@@ -35,16 +35,14 @@ function RegisterStep({
             newErrors.lastName = "Only letters are allowed";
         }
 
-        const email = formData.email?.trim();
-        if (!email) {
-            newErrors.email = "Email is required";
-        } else if (!emailRegex.test(email)) {
-            newErrors.email = "Invalid email address";
-        }
+       const email = formData.email?.trim();
 
-        if (!formData.categoryType) {
-            newErrors.categoryType = "Please select a category";
-        }
+if (email && !emailRegex.test(email)) {
+    newErrors.email = "Please enter a valid email address";
+}
+        if (!formData.typeOption) {
+    newErrors.categoryType = "Please select a category";
+}
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -89,20 +87,19 @@ function RegisterStep({
                     lettersOnly
                 />
 
-                <FormField
-                    label="Email"
-                    icon={FaEnvelope}
-                    value={formData.email}
-                    onChange={(email) =>
-                        setFormData({ ...formData, email: email.trim().toLowerCase() })
-                    }
-                    placeholder="email@company.com"
-                    type="email"
-                    autoComplete="email"
-                    className="col-span-full"
-                    required
-                    error={errors.email}
-                />
+               <FormField
+    label="Email (Optional)"
+    icon={FaEnvelope}
+    value={formData.email}
+    onChange={(email) =>
+    updateField("email", email.toLowerCase())
+}
+    placeholder="email@example.com"
+    type="email"
+    autoComplete="email"
+    className="col-span-full"
+    error={errors.email}
+/>
 
                 <div className="col-span-full">
                     <CategoryTypeSelect
