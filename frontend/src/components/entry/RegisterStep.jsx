@@ -88,13 +88,13 @@ if (email && !emailRegex.test(email)) {
                 />
 
                <FormField
-    label="Email (Optional)"
+    label="Email"
     icon={FaEnvelope}
     value={formData.email}
     onChange={(email) =>
     updateField("email", email.toLowerCase())
 }
-    placeholder="email@example.com"
+    placeholder="abc@gmail.com"
     type="email"
     autoComplete="email"
     className="col-span-full"
