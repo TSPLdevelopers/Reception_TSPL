@@ -15,10 +15,8 @@ const createLimiter = (max, message) =>
     });
 
 const app = express();
-const trustProxy = process.env.TRUST_PROXY;
-
 app.disable("x-powered-by");
-if (trustProxy) app.set("trust proxy", Number(trustProxy) || trustProxy);
+app.set("trust proxy", 1);
 
 app.use(helmet());
 app.use(cors({
