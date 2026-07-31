@@ -11,7 +11,10 @@ const createLimiter = (max, message) =>
         max,
         standardHeaders: true,
         legacyHeaders: false,
-        message: { message }
+        message: { message },
+        validate: {
+            forwardedHeader: false
+        }
     });
 
 const app = express();
